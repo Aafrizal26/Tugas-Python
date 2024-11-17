@@ -1,0 +1,22 @@
+import matplotlib.pyplot as plt
+import matplotlib.patches as patches
+
+# Buat gambar baru
+fig, ax = plt.subplots(figsize=(6, 4))
+
+# Tambahkan tiga garis horizontal untuk bendera
+# Garis merah
+ax.add_patch(patches.Rectangle((0, 2/3), 1, 1/3, color='#FF0000'))  # Merah
+# Garis putih
+ax.add_patch(patches.Rectangle((0, 1/3), 1, 1/3, color='#FFFFFF'))  # Putih
+# Garis biru muda
+ax.add_patch(patches.Rectangle((0, 0), 1, 1/3, color='#00A3E0'))  # Biru muda
+
+# Atur batas dan aspek rasio
+ax.set_xlim(0, 1)
+ax.set_ylim(0, 1)
+ax.set_aspect(1)
+ax.axis('off')  # Matikan sumbu
+
+# Tampilkan bendera
+plt.show()
